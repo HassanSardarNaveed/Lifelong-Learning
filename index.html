@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quote — Clay P. Bedford</title>
+  <meta name="description" content="A thoughtful quote by Clay P. Bedford about curiosity and lifelong learning." />
+
+  <style>
+    :root{
+      --bg1: #f7f3ee;
+      --card-bg: rgba(255,255,255,0.8);
+      --accent: #7b4f3b;
+      --muted: rgba(0,0,0,0.55);
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(20,20,20,0.12);
+      --max-width: 920px;
+      --gap: 22px;
+      font-family: "Georgia", ui-serif, serif;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(235,226,215,0.6), transparent 20%),
+        linear-gradient(180deg, #fffdf9 0%, var(--bg1) 100%);
+      color:var(--muted);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap: var(--gap);
+      align-items:center;
+    }
+
+    @media (max-width:900px){
+      .container{ grid-template-columns: 1fr; padding: 0; }
+      .card { order: 2; }
+      .hero { order: 1; }
+    }
+
+    .hero{
+      padding:28px;
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      align-items:flex-start;
+    }
+
+    .hero h1{
+      margin:0;
+      font-size:28px;
+      color:var(--accent);
+      letter-spacing:0.2px;
+    }
+
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:15px;
+    }
+
+    .card{
+      padding:18px;
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.92));
+      box-shadow: 0 6px 20px rgba(15,15,15,0.06);
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      align-items:center;
+    }
+
+    .image-wrap{
+      width:100%;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow: 0 8px 26px rgba(20,20,20,0.12);
+    }
+
+    .image-wrap img{
+      display:block;
+      width:100%;
+      height:auto;
+      vertical-align:middle;
+      transform-origin:center;
+      transition: transform .6s cubic-bezier(.2,.9,.3,1);
+    }
+
+    .image-wrap:hover img{ transform: scale(1.02); }
+
+    .caption{
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size:14px;
+      color:var(--muted);
+      text-align:center;
+      padding:8px 6px 0;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      margin-top:8px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+      border: 1px solid rgba(0,0,0,0.06);
+      background: white;
+      color:var(--accent);
+      box-shadow: 0 6px 18px rgba(15,15,15,0.06);
+    }
+
+    .btn.primary{
+      background: linear-gradient(180deg, #7b4f3b, #6b3f2f);
+      color: #fff;
+      border: none;
+      box-shadow: 0 10px 30px rgba(107,63,47,0.18);
+    }
+
+    footer{
+      margin-top:18px;
+      text-align:center;
+      font-size:13px;
+      color:rgba(0,0,0,0.45);
+    }
+
+    /* subtle entrance */
+    .container{ opacity:0; transform: translateY(10px); animation: enter .6s ease forwards; }
+    @keyframes enter { to { opacity:1; transform:none; } }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <section class="hero" aria-labelledby="title">
+      <h1 id="title">A Thoughtful Reminder</h1>
+      <p>
+        A simple, elegant quote to share — perfect for teachers, learners, and anyone who believes curiosity lasts a lifetime.
+      </p>
+
+      <div style="width:100%; margin-top:10px;">
+        <p style="margin:0 0 10px 0; font-size:13px; color:rgba(0,0,0,0.45)">
+          Quote by <strong>Clay P. Bedford</strong>
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn" href="#view">View</a>
+          <a class="btn primary" href="quote.png" download>Download PNG</a>
+        </div>
+      </div>
+
+      <footer style="margin-top:14px">Made with care · Share kindness and curiosity</footer>
+    </section>
+
+    <aside class="card" id="view" aria-label="Quote image">
+      <div class="image-wrap">
+        <!-- rename the generated image to quote.png and place it alongside this file -->
+        <img src="quote.png" alt="Quote by Clay P. Bedford about teaching curiosity" />
+      </div>
+      <div class="caption">
+        "You can teach a student a lesson for a day; but if you can teach him to learn by creating curiosity, he will continue the learning process as long as he lives." — Clay P. Bedford
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
