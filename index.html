@@ -123,6 +123,13 @@ body {
     box-shadow: 0 15px 30px rgba(0,255,200,0.4);
 }
 
+#emailText {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.95;
+}
+
 .footer {
     margin-top: 25px;
     font-size: 13px;
@@ -133,12 +140,14 @@ body {
 <body>
 
 <div class="card">
+
+    <!-- Animated Flag -->
     <div class="flag">🇵🇰</div>
 
     <!-- Typing Name -->
     <div class="name" id="typing"></div>
 
-    <div class="subtitle">Computer Science Student — UoPeople</div>
+    <div class="subtitle">Computer Science Student — University of the People</div>
 
     <div class="info">
         <p><span class="highlight">Credits Passed:</span> 99</p>
@@ -154,23 +163,32 @@ body {
         <div class="skill">iOS Development</div>
     </div>
 
-    <!-- Contact Section -->
+    <!-- Contact Buttons -->
     <div class="buttons">
         <a class="btn" href="https://wa.me/923022129236" target="_blank">📱 WhatsApp Me</a>
-        <a class="btn" href="mailto:hassannaveed@my.uopeople.edu">✉️ Email Me</a>
+
+        <!-- Email button with fallback -->
+        <a class="btn" href="mailto:hassannaveed@my.uopeople.edu" onclick="showEmail()">✉️ Email Me</a>
+
         <a class="btn" href="https://pk.linkedin.com/in/hassan-sardar-naveed-8b496b369" target="_blank">🔗 LinkedIn</a>
-        <a class="btn" href="https://www.credly.com/users/hassansardarnaveed/edit#credly" target="_blank">🏅 Credly Profile</a>
+        <a class="btn" href="https://www.credly.com/users/hassansardarnaveed/edit#credly" target="_blank">🏅 Credly</a>
         <a class="btn" href="https://hassansardarnaveed.github.io/My-Portfolio/">📄 Download CV</a>
     </div>
+
+    <!-- Email fallback text -->
+    <p id="emailText">📧 hassannaveed@my.uopeople.edu (copied)</p>
 
     <div class="footer">
         Passion • Intelligence • Consistency
     </div>
+
 </div>
 
 <script>
+// Typing animation
 const text = "Hassan Sardar Naveed";
 let i = 0;
+
 function typeEffect() {
     if (i < text.length) {
         document.getElementById("typing").innerHTML += text.charAt(i);
@@ -179,6 +197,15 @@ function typeEffect() {
     }
 }
 typeEffect();
+
+// Email fallback + copy
+function showEmail() {
+    const emailText = document.getElementById("emailText");
+    emailText.style.display = "block";
+
+    navigator.clipboard.writeText("hassannaveed@my.uopeople.edu")
+        .catch(() => {});
+}
 </script>
 
 </body>
