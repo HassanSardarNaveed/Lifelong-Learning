@@ -1,141 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Student Profile | UoPeople CS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hassan Sardar Naveed | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-    body {
-        min-height: 100vh;
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        overflow: hidden;
-    }
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
 
-    .card {
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(15px);
-        border-radius: 20px;
-        padding: 40px;
-        max-width: 480px;
-        width: 90%;
-        text-align: center;
-        box-shadow: 0 30px 80px rgba(0,0,0,0.4);
-        animation: float 6s ease-in-out infinite;
-    }
+.card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    border-radius: 25px;
+    padding: 40px;
+    width: 95%;
+    max-width: 520px;
+    text-align: center;
+    box-shadow: 0 40px 90px rgba(0,0,0,0.45);
+    animation: float 6s ease-in-out infinite;
+}
 
-    @keyframes float {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-15px); }
-        100% { transform: translateY(0); }
-    }
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
 
-    .name {
-        font-size: 32px;
-        font-weight: 700;
-        background: linear-gradient(90deg, #00f5ff, #00ff87);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 5px;
-    }
+.flag {
+    font-size: 40px;
+    animation: wave 1.8s infinite;
+}
 
-    .country {
-        font-size: 14px;
-        opacity: 0.9;
-        margin-bottom: 15px;
-    }
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
 
-    .title {
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 5px;
-    }
+.name {
+    font-size: 30px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00f5ff, #00ff87);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    min-height: 42px;
+}
 
-    .subtitle {
-        font-size: 15px;
-        opacity: 0.85;
-        margin-bottom: 25px;
-    }
+.subtitle {
+    margin-top: 5px;
+    opacity: 0.9;
+}
 
-    .info p {
-        margin: 12px 0;
-        font-size: 15px;
-    }
+.info {
+    margin: 25px 0;
+}
 
-    .highlight {
-        color: #00ffcc;
-        font-weight: 600;
-    }
+.info p {
+    margin: 10px 0;
+}
 
-    .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        margin-top: 20px;
-    }
+.highlight {
+    color: #00ffcc;
+    font-weight: 600;
+}
 
-    .skill {
-        padding: 8px 14px;
-        border-radius: 30px;
-        background: linear-gradient(135deg, #00f5ff, #00ff87);
-        color: #000;
-        font-size: 13px;
-        font-weight: 600;
-        transition: transform 0.3s ease;
-    }
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
 
-    .skill:hover {
-        transform: scale(1.15) rotate(-2deg);
-    }
+.skill {
+    padding: 8px 15px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #00f5ff, #00ff87);
+    color: #000;
+    font-size: 13px;
+    font-weight: 600;
+    transition: transform 0.3s;
+}
 
-    .footer {
-        margin-top: 30px;
-        font-size: 13px;
-        opacity: 0.8;
-    }
+.skill:hover {
+    transform: scale(1.15);
+}
 
-    .glow {
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        background: radial-gradient(circle, #00ffcc, transparent 70%);
-        filter: blur(100px);
-        top: -80px;
-        right: -80px;
-        animation: pulse 4s infinite alternate;
-    }
+.buttons {
+    margin-top: 30px;
+    display: grid;
+    gap: 12px;
+}
 
-    @keyframes pulse {
-        from { opacity: 0.4; }
-        to { opacity: 0.8; }
-    }
+.btn {
+    padding: 12px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    background: linear-gradient(135deg, #00f5ff, #00ff87);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,255,200,0.4);
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 13px;
+    opacity: 0.8;
+}
 </style>
 </head>
 <body>
 
-<div class="glow"></div>
-
 <div class="card">
-    <!-- Replace name and country below -->
-    <div class="name">Hassan Sardar Naveed</div>
-    <div class="country">🇵🇰 Pakistan</div>
+    <div class="flag">🇵🇰</div>
 
-    <div class="title">Computer Science Student</div>
-    <div class="subtitle">University of the People (UoPeople)</div>
+    <!-- Typing Name -->
+    <div class="name" id="typing"></div>
+
+    <div class="subtitle">Computer Science Student — UoPeople</div>
 
     <div class="info">
         <p><span class="highlight">Credits Passed:</span> 99</p>
@@ -151,10 +154,32 @@
         <div class="skill">iOS Development</div>
     </div>
 
+    <!-- Contact Section -->
+    <div class="buttons">
+        <a class="btn" href="https://wa.me/923022129236" target="_blank">📱 WhatsApp Me</a>
+        <a class="btn" href="mailto:hassannaveed@my.uopeople.edu">✉️ Email Me</a>
+        <a class="btn" href="https://pk.linkedin.com/in/hassan-sardar-naveed-8b496b369" target="_blank">🔗 LinkedIn</a>
+        <a class="btn" href="https://www.credly.com/users/hassansardarnaveed/edit#credly" target="_blank">🏅 Credly Profile</a>
+        <a class="btn" href="cv.pdf" download>📄 Download CV</a>
+    </div>
+
     <div class="footer">
-        Passion • Intelligence • Self-Belief
+        Passion • Intelligence • Consistency
     </div>
 </div>
+
+<script>
+const text = "Hassan Sardar Naveed";
+let i = 0;
+function typeEffect() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 120);
+    }
+}
+typeEffect();
+</script>
 
 </body>
 </html>
